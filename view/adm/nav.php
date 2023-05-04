@@ -19,6 +19,10 @@
                     ><div class="sb-nav-link-icon"><i data-feather="users"></i></div>
                     Punto de Atención</a
                 >
+                <a class="nav-link" href="listado_repotenciacion.php"
+                    ><div class="sb-nav-link-icon"><i data-feather="users"></i></div>
+                    Repotenciación</a
+                >
                 <a class="nav-link" href="listado_iniciativa.php"
                     ><div class="sb-nav-link-icon"><i data-feather="users"></i></div>
                    Iniciativas</a

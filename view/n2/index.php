@@ -25,7 +25,7 @@
                     </div>
                    <div class="container-fluid mt-n10">
                         <div class="row">
-                            <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="col-xl-2 col-md-6 mb-4">
                                 <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-purple h-100">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
@@ -134,12 +134,35 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="col-xl-2 col-md-6 mb-4">
                                 <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-yellow h-100">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1">
                                                 <div class="small font-weight-bold text-red mb-1">N° Punto Atención Abiertos</div>
+                                                <div class="h5" id="cant_patencion"></div>
+                                                <div class="text-xs font-weight-bold text-danger d-inline-flex align-items-center">
+                                                <div>
+                                                   <button class="btn btn-outline-danger btn-icon" type="button" onclick="cargar_tabla('Punto Atención');">
+                                                        <i class="fas fa-search"></i>
+                                                    </button>
+                                                    <button class="btn btn-outline-danger btn-icon" id="btn-export-patencion" type="button">
+                                                        <i class="fas fa-file-excel"></i>
+                                                    </button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="ml-2"><i class="fas fa-bullhorn fa-2x text-gray-200"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-md-6 mb-4">
+                                <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-yellow h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="small font-weight-bold text-red mb-1">N° Repotenciación</div>
                                                 <div class="h5" id="cant_patencion"></div>
                                                 <div class="text-xs font-weight-bold text-danger d-inline-flex align-items-center">
                                                 <div>

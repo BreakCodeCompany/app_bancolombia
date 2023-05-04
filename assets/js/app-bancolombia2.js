@@ -173,40 +173,6 @@ function historial(){
                 ]
             }); 
         break;
-        case '7':
-            $("#tabla").DataTable({ 
-                language: {
-                    url: '../../assets/js/Spanish.json'
-                },
-                destroy: true,
-                ajax:{
-                    method:"POST",
-                    url: "../../controlador/controller_repotenciacion.php?opcion=12",
-                    data:{fecha_inicio:inicio,fecha_final:final},
-                },
-                "columns":[
-                    {data:"id",title:"ID"},
-                    {data:"titulo",title:"Titulo"},
-                    {data:"fecha_fin",title:"Fecha Fin"},
-                    {"render": function (data, type, row) {
-                        if(row.prioridad == "Critico"){
-                            return ' <span class="badge badge-danger">'+row.prioridad+'</span>'
-                        }else{
-                            return ' <span class="badge badge-default">'+row.prioridad+'</span>'
-                        }               
-                    }},
-                    {"render": function (data, type, row) {
-                        switch(row.estado){
-                            case 'Cerrado': return ' <span class="badge badge-primary">'+row.estado+'</span>'
-                        }
-                    },title:"Estado"},
-                    {"render": function (data, type, row) {
-                        return '<button class="btn btn-outline-primary btn-sm" type="button" onclick="ver('+row.id+')">Entrar</button>'
-                    }},        
-                
-                ]
-            }); 
-        break;
         case '6':
             $("#tabla").DataTable({ 
                 language: {
@@ -816,9 +782,6 @@ function ocultar(id){
         case 4:
             url="../../controlador/controller_patencion.php?opcion=1";
             break;
-        case 5:
-            url="../../controlador/controller_repotenciacion.php?opcion=1";
-            break;
     }
     $.ajax({
         type: 'POST',
@@ -857,9 +820,6 @@ function cargarData(id){//funcion que carga select de oc
         case 8://carga de timeline punto atencion
             url='../../controlador/controller_patencion.php?opcion=8';
             break;
-        case 12://carga de timeline punto atencion
-            url='../../controlador/controller_repotenciacion.php?opcion=8';
-            break;
         case 9://carga de datos iniciativa
             url='../../controlador/controller_iniciativa.php?opcion=4';
             break;
@@ -893,13 +853,7 @@ function cargarData(id){//funcion que carga select de oc
                 case 7://carga de datos punto atencion
                     $('#resultado').html(responseText); 
                     break;
-                case 11://carga de datos punto atencion
-                    $('#resultado').html(responseText); 
-                    break;
                 case 8://carga de timeline punto atencion
-                    $('#timeline').html(responseText);  
-                    break;
-                case 12://carga de timeline punto atencion
                     $('#timeline').html(responseText);  
                     break;
                 case 9://carga de datos punto atencion
@@ -1031,7 +985,7 @@ $("#btn-aceptar").click(function (){
                 if(data==true){
                     window.location.href = url2;
                 }else{
-                    toastr.error("Error al cerrar 5");
+                    toastr.error("Error al cerrar");
                 }
             } 
         });
@@ -1147,7 +1101,7 @@ function ver(id){
             break;
         case '7':
             //id= $(this).parent().prev().prev().prev().prev().text();
-            url="../../controlador/controller_repotenciacion.php?opcion=6&id="+id
+            //url="../../controlador/controller_repotenciacion.php?opcion=6&id="+id
             break;
         case '6':
             //id= $(this).parent().prev().prev().prev().prev().text();

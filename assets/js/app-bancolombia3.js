@@ -899,9 +899,6 @@ function cargarData(id){//funcion que carga select de oc
                 case 8://carga de timeline punto atencion
                     $('#timeline').html(responseText);  
                     break;
-                case 12://carga de timeline punto atencion
-                    $('#timeline').html(responseText);  
-                    break;
                 case 9://carga de datos punto atencion
                     $('#resultado').html(responseText); 
                     break;

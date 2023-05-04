@@ -70,7 +70,8 @@
 		}
 		public function registrar(){
 			$this->con->setB("id,descripcion,afectado,titulo,fecha_creacion,estado,id_prioridad,proyecto");
-			$this->con->setC("$this->id,'$this->descripcion','$this->afectados','$this->titulo','$this->fecha_creacion','$this->estado','$this->id_prioridad',".$_SESSION['proyecto']."");
+			$this->con->setC("$this->id,'$this->descripcion','$this->afectados','$this->titulo','$this->fecha_creacion',
+			'$this->estado','$this->id_prioridad',".$_SESSION['proyecto']."");
 			$resultado=$this->con->registra();
 			if(!$resultado){
 				return false;
